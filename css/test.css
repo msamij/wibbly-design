@@ -1,0 +1,287 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 65.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  height: 100vh;
+  /* padding: 2rem 8rem; */
+}
+
+.container {
+  display: grid;
+  /* background-color: bisque; */
+  grid-template-rows: min-content 1fr;
+  /* row-gap: 3rem; */
+}
+
+.header {
+  grid-row: 1 / 2;
+  display: grid;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.595);
+  padding: 2rem 15rem;
+  grid-template-columns: 6rem 1fr;
+  /* background-color: aquamarine; */
+}
+
+.overview {
+  /* background-color: #f2efee; */
+  position: relative;
+}
+
+.box-left {
+  /* background-color: brown; */
+}
+
+.box-left img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.box-right {
+  /* background-color: blueviolet; */
+  justify-self: end;
+  display: grid;
+  position: relative;
+  column-gap: 6rem;
+  grid-template-rows: 1fr;
+  align-items: center;
+  grid-template-columns: repeat(3, max-content);
+}
+
+.btn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  color: #ff85a1;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: #fff;
+}
+
+.btn-icon {
+  margin-left: 1rem;
+}
+
+.btn-bookings {
+  /* background-color: #55c57a; */
+  padding: 0.9rem 2rem;
+}
+
+.btn-notification {
+  padding: 0.9rem 2rem;
+}
+
+.btn-profile {
+  padding: 0.9rem 2rem;
+}
+
+.btn-icon {
+  fill: #ff85a1;
+  height: 2.2rem;
+  width: 2.2rem;
+}
+
+.profile-content {
+  /* height: 6rem;
+  width: 6rem; */
+  padding: 3rem 5rem;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background-color: #f7f7f7;
+  box-shadow: 0 0.8rem 5rem 2rem rgba(199, 192, 190, 0.1);
+  right: -3.5rem;
+  top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s 0.2s;
+  border: 1px solid #f5f5ef;
+}
+
+.btn-signup {
+  margin-bottom: 2rem;
+}
+.btn-signup,
+.btn-login {
+  padding: 0.9rem 2rem;
+  color: #f5f5ef;
+  background-color: #ff85a1;
+  border-radius: 5px;
+}
+
+.btn-signup:hover,
+.btn-login:hover {
+  color: #ff85a1;
+  /* color: #ea4c89; */
+}
+
+.btn-profile:focus + .profile-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.heading {
+  font-family: inherit;
+  font-weight: 300;
+  color: rgb(82, 77, 77);
+}
+
+.heading-hotel {
+  font-size: 3rem;
+  margin-top: 5rem;
+  text-align: left;
+  margin-left: 15rem;
+}
+
+.card-box {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 10rem;
+}
+
+.card {
+  cursor: pointer;
+  padding: 2rem 3rem;
+  border-radius: 3px;
+  background-color: #f7f7f7;
+}
+
+.card-heading {
+  font-size: 2rem;
+}
+
+.card img {
+  height: 20rem;
+  border-radius: 3px;
+}
+
+.heading-price {
+  font-size: 1.5rem;
+}
+
+footer {
+  /* background-color: #f2efee; */
+  text-align: center;
+  padding: 1.5rem;
+}
+
+footer p {
+  font-family: inherit;
+  font-size: 1.3rem;
+  color: rgb(82, 77, 77);
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(82, 77, 77);
+}
+
+footer a:visited {
+  color: none;
+}
+
+.popup-menu-list {
+  position: absolute;
+  background-color: #ffff;
+  max-height: 15rem;
+  width: 50rem;
+  border-radius: 5px;
+  top: 10%;
+  left: 50%;
+  z-index: 200;
+  transform: translate(-50%, -10%);
+  padding: 2rem 3rem;
+  overflow-y: scroll;
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(39, 39, 39, 0.9);
+  z-index: 100;
+  transition: all 0.2s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.booking {
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.booking:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.booking img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50px;
+  margin-right: 3rem;
+}
+
+.booking-title-box p {
+  font-size: 1.5rem;
+  color: rgb(82, 77, 77);
+}
+
+.heading-booking-warning {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.notification {
+  font-family: inherit;
+  font-size: 1.6rem;
+  color: rgb(82, 77, 77);
+  text-align: center;
+}
+.notification:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.rating-link {
+  text-decoration: underline;
+  color: rgb(82, 77, 77);
+  transition: all 0.3s;
+  margin-left: 0.3rem;
+}
+
+.rating-link:hover {
+  background-color: #ff85a1;
+  color: #f7f7f7;
+  padding: 0.5rem 0.8rem;
+}
